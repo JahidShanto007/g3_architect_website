@@ -22,6 +22,15 @@
     border: none;
 }
 
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+main>section {
+    margin-top: 100px;
+}
+
 /* header styles  */
 
 /* navbar related styles  */
@@ -33,13 +42,13 @@
 
 header {
     background-color: rgba(255, 144, 14, 0.1);
-    
+
 }
 
 .nav-bar {
     justify-content: space-between;
     align-items: center;
-   
+
 }
 
 .nav-item {
@@ -54,7 +63,8 @@ header {
     font-weight: 500;
 }
 
-.nav-bar, .banner {
+.nav-bar,
+.banner {
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -83,13 +93,92 @@ header {
     border-radius: 8px;
     background: rgb(255, 144, 14);
 }
-.banner-img{
+
+.banner-img {
     width: 100%;
 }
+
+/* tem and feature style  */
+
+.teams {
+    align-items: center;
+}
+
+.team-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.our-features {
+    margin-left: 75px;
+    max-width: 537px;
+}
+
+.feature-title {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+#part-1 {
+    color: rgb(114, 114, 114);
+}
+
+#part-2 {
+    color: rgb(19, 19, 19);
+}
+
+#part-3 {
+    color: rgb(255, 144, 14);
+}
+
+.feature-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(114, 114, 114);
+}
+
+/* features will enjoy  */
+.facts-title {
+    font-size: 45px;
+    font-weight: 700;
+   color: rgb(19, 19, 19);
+}
+
+.facts-description {
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 542px;
+   color: rgb(114, 114, 114);
+}
+
+
 /* responsive media query  */
 
 @media screen and (max-width: 576px) {
-    .nav-bar, .nav-link{
-        flex-direction: column ;
+
+    .nav-bar,
+    .nav-link,
+    .teams {
+        flex-direction: column;
+    }
+
+    .team-img-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .our-features {
+        margin-left: 20px;
+    }
+}
+
+/* for medium device  */
+@media screen and (min-width: 576px) and (max-width: 990px) {
+    .teams {
+        flex-direction: column;
+    }
+
+    .our-features {
+        margin-left: 40px;
     }
 }
